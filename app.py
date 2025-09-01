@@ -69,6 +69,7 @@ else:
                         st.rerun() # Rerun the app to update the word count
                     else:
                         st.toast(message, icon="⚠️")
+                        # pass
                         
 # --- ADMIN SIDEBAR ---
 with st.sidebar:
