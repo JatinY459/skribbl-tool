@@ -98,3 +98,11 @@ with st.sidebar:
                     st.rerun()
                 elif password != wh.ADMIN_PASSWORD:
                     st.error("Incorrect password.")
+
+
+
+st.divider()
+col1, col2, col3 = st.columns([1, 2, 1])
+with col2:
+    col2.markdown("""<div style="font-size:1.5rem; text-align: center;">Made for Fun</div>""", unsafe_allow_html=True)
+    col2.markdown("""<div style="font-size:2rem; text-align: center;">By Jatin Yadav</div>""", unsafe_allow_html=True)
