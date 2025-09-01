@@ -23,9 +23,13 @@ with st.form(key="create_collection_form", clear_on_submit=True):
         "Enter new collection name",
         placeholder="e.g., Video Games, Science, Disney Movies",
     )
-    submitted = st.form_submit_button("Create Collection")
+    col1, col2 = st.columns([2, 3])
+    submitted = col1.form_submit_button("Create Collection")
+    # --- The Confirmation Checkbox ---
+    # Add this checkbox to the form. It must be checked to proceed.
+    confirmed = col2.checkbox("I'm sure I want to create this new collection.")
 
-    if submitted and new_collection_input:
+    if submitted and new_collection_input and confirmed:
         if wh.create_collection(new_collection_input):
             st.success(f"Collection '{new_collection_input}' was created successfully!")
         else:

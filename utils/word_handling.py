@@ -59,7 +59,8 @@ def add_word(collection_name: str, word: str):
     # Check if the input string contains more than two words.
     if len(word.split()) > 2:
         return "Error: Please enter a maximum of two words."
-
+    if len(word) > 20:
+        return "Error: Word must be 20 characters or less."
 
     # Use the $addToSet operator to add the word only if it's not already present.
     # This is an atomic and efficient way to prevent duplicates.
