@@ -55,6 +55,12 @@ def add_word(collection_name: str, word: str):
     word = word.strip().lower()
     if not client or not word: return "Error: Word cannot be empty."
 
+        # --- WORD COUNT VALIDATION STEP ---
+    # Check if the input string contains more than two words.
+    if len(word.split()) > 2:
+        return "Error: Please enter a maximum of two words."
+
+
     # Use the $addToSet operator to add the word only if it's not already present.
     # This is an atomic and efficient way to prevent duplicates.
     result = word_collections.update_one(
