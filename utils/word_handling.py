@@ -66,7 +66,8 @@ def add_word(collection_name: str, word: str):
         return f"Success! Added '{word.capitalize()}'."
     else:
         # If nothing was modified, it means the word was already in the set.
-        return f"'{word.capitalize()}' is already in this collection."
+        # return f"'{word.capitalize()}' is already in this collection."
+        pass
 
 def delete_collection(collection_name: str):
     """Deletes an entire collection document."""
